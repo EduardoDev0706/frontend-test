@@ -37,5 +37,18 @@ namespace TesteHelena.Controllers
             return Ok(empresa);
         }
 
+        [HttpPost] // POST: api/empresas
+        public async Task<ActionResult<Empresa>> PostEmpresa([FromBody] Empresa novaEmpresa)
+        {
+            if (await _context.Empresas.AnyAsync(e => e.Id == novaEmpresa.Id))
+            {
+                return BadRequest($"Ja existe uma empresa com o ID {novaEmpresa.Id}.");
+            }
+            _context.Empresas.Add(novaEmpresa);
+            await _context.SaveChangesAsync();
+            return CreatedAtAction(nameof(GetEmpresa), new { id = novaEmpresa.Id}, novaEmpresa);
+        }
+
+
     }
 }
