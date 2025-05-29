@@ -67,6 +67,19 @@ namespace TesteHelena.Controllers
             await _context.SaveChangesAsync();
             return NoContent();
         }
-        
+
+        [HttpDelete("{id}")] // DELETE: api/empresas/{id}
+        public async Task<IActionResult> DeleteEmpresa(int id)
+        {
+            var empresaParaRemover = await _context.Empresas.FirstOrDefaultAsync(e => e.Id == id);
+            if (empresaParaRemover == null)
+            {
+                return NotFound($"Empresa com ID {id} nao foi encontrada para remocao.");
+            }
+
+            _context.Empresas.Remove(empresaParaRemover);
+            await _context.SaveChangesAsync();
+            return NoContent();
+        }
     }
 }
