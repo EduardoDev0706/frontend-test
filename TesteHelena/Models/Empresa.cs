@@ -6,7 +6,7 @@ namespace TesteHelena.Models
     {
         // Propriedades
         public int Id { get; set; }
-        public string? AvatarUrl { get; set; }
+        public string? AvatarUrl { get;  private set; }
         public string? NomeFantasia { get; set; }
         public string? RazaoSocial { get; set; }
         public int QuantidadeDeFuncionarios { get; set; }
