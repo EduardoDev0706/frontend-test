@@ -49,6 +49,5 @@ namespace TesteHelena.Controllers
             return CreatedAtAction(nameof(GetEmpresa), new { id = novaEmpresa.Id}, novaEmpresa);
         }
 
-
     }
 }
