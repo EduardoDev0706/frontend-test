@@ -1,0 +1,8 @@
+/home/eduardo/Programacao/TesteBackend/TesteHelena/obj/Debug/net9.0/TesteHelena.csproj.AssemblyReference.cache
+/home/eduardo/Programacao/TesteBackend/TesteHelena/obj/Debug/net9.0/TesteHelena.GeneratedMSBuildEditorConfig.editorconfig
+/home/eduardo/Programacao/TesteBackend/TesteHelena/obj/Debug/net9.0/TesteHelena.AssemblyInfoInputs.cache
+/home/eduardo/Programacao/TesteBackend/TesteHelena/obj/Debug/net9.0/TesteHelena.AssemblyInfo.cs
+/home/eduardo/Programacao/TesteBackend/TesteHelena/obj/Debug/net9.0/TesteHelena.csproj.CoreCompileInputs.cache
+/home/eduardo/Programacao/TesteBackend/TesteHelena/obj/Debug/net9.0/TesteHelena.MvcApplicationPartsAssemblyInfo.cs
+/home/eduardo/Programacao/TesteBackend/TesteHelena/obj/Debug/net9.0/TesteHelena.MvcApplicationPartsAssemblyInfo.cache
+/home/eduardo/Programacao/TesteBackend/TesteHelena/obj/Debug/net9.0/TesteHelena.sourcelink.json
