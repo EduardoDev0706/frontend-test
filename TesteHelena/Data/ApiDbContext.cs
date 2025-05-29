@@ -9,6 +9,6 @@ namespace TesteHelena.Data
         {
 
         }
-        public DbSet<Empresa> Empresas { get; set; }
+        public DbSet<Empresa> Empresas { get; set; } = default!;
     }
 }
