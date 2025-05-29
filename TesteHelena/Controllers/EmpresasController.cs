@@ -46,8 +46,27 @@ namespace TesteHelena.Controllers
             }
             _context.Empresas.Add(novaEmpresa);
             await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetEmpresa), new { id = novaEmpresa.Id}, novaEmpresa);
+            return CreatedAtAction(nameof(GetEmpresa), new { id = novaEmpresa.Id }, novaEmpresa);
         }
 
+        [HttpPut("{id}")] // PUT: api/empresas/{id}
+        public async Task<IActionResult> PutEmpresa(int id, [FromBody] Empresa empresaAtualizada)
+        {
+            if (id != empresaAtualizada.Id)
+            {
+                return BadRequest("O ID da rota nao corresponde ao ID da empresa.");
+            }
+
+            var empresaExistente = await _context.Empresas.FirstOrDefaultAsync(e => e.Id == id);
+            if (empresaExistente == null)
+            {
+                return NotFound($"Empresa com ID {id} nao encontrada para atualizacao.");
+            }
+
+            _context.Entry(empresaExistente).CurrentValues.SetValues(empresaAtualizada);
+            await _context.SaveChangesAsync();
+            return NoContent();
+        }
+        
     }
 }
